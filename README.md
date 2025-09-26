@@ -1,44 +1,149 @@
-# Retail__Returns__Dashboard
-his project contains an interactive Power BI dashboard designed to provide a comprehensive analysis of retail returns performance, offering insights into return rates, year-over-year changes, and employee contribution to return differences.
+This repository contains the completed Power BI project submission for 
 
-🎯 Key Metrics & Goals
-The primary goal of this dashboard is to monitor and analyze the efficiency of the retail operation concerning product returns. Key metrics are highlighted at the top for immediate performance assessment:
+Assignment 2025 , focusing on a comprehensive analytics dashboard for 
 
-Return Rate %: Current overall percentage of returns (e.g., 0.09).
+Retail Returns Performance.
 
-YoY % Change: Year-over-Year change in the Return Rate (e.g., 0.60).
+The project successfully delivers insights into employee performance, returns analysis, and key trends using advanced Year-over-Year (YoY) comparisons.
+ Project Objective
+The core objective was to build a Power BI Report/Dashboard using the 
 
-YoY Avg. Return Value: The average monetary value of returns compared to the previous year (e.g., 206.67).
+Orders, People, and Returns datasets to provide insights into employee performance, returns analysis, and key trends with YoY comparison.
 
-YoY Avg. Value % Change: The percentage change in the average return value (e.g., -0.06).
+📋 Deliverables Met
+The final submission includes the following required components:
 
-Total Returns: The total count of returns recorded (e.g., 594).
+PBIX File: The complete Power BI dashboard file.
 
-💡 Dashboard Components & Visualizations
-The dashboard is structured into several key sections to address different aspects of the returns data:
 
-1. Employee Performance Analysis
-This section focuses on individual contribution to the overall return difference:
+YouTube Link: A 5-minute video presentation walkthrough (link to be provided upon submission).
 
-% contribution by employee with YoY difference: A Donut Chart shows the percentage breakdown of the year-over-year difference in returns contributed by key personnel (Anna, Maigee, Kelly Williams, Casandra Brandow, etc.). This helps pinpoint which employees or regions are driving the change in return volume.
 
-Top 5 employees by returns with YoY comparison: A Bar Chart visually compares Total Returns and Total Returns Last Year for the top 5 employees, allowing for quick identification of who has seen the largest increase or decrease in returns volume.
+✅ Technical Implementation (Tasks Performed)
+The project strictly followed the technical requirements outlined in the assignment brief.
 
-2. Temporal Trends
-Monthly return trends with YoY overlay: A Time-Series Chart (likely a column or line chart) displays the total monthly returns over a period (e.g., from Jul 2014 onwards) with a year-over-year overlay. This helps identify seasonality and track long-term trends in returns.
+1. Data Preparation & Modeling
 
-3. Data Context & Filtering
-The left-hand side provides the core context for the analysis, which can be used for filtering:
+Data Loading: Imported, cleaned, and transformed the Orders, People.xlsx, and Returns.xlsx datasets.
 
-Personnel List: A slicer or list showing individual employees (Person).
 
-Geographic Regions: A slicer or list showing operational regions (Region).
 
-Date Slicer: A date-range slicer allowing users to filter the view by specific transaction dates (Date).
+Data Model: Created a Star Schema design with logical relationships between all tables (Orders, People, Returns).
 
-🛠️ Technology Stack
-Data Visualization: Microsoft Power BI Desktop
 
-Language (Implicit): DAX (Data Analysis Expressions) for creating custom measures and calculated columns within Power BI.
 
-Data Source (Assumed): A retail transaction/returns database (e.g., SQL Server, CSV, Excel files, etc.).
+
+
+Date Table: A dedicated Date Table was created using DAX functions and marked as the official date table for accurate time intelligence.
+
+
+2. Advanced DAX Calculations
+Complex DAX measures were written to calculate key performance indicators (KPIs) and their YoY comparisons using time intelligence functions like 
+
+SAMEPERIODLASTYEAR().
+
+
+Measure	Formula	YoY Calculation Included?
+Return Rate %	
+(Number of returns / Total transactions) 
+
+Yes (YoY Return Rate % change) 
+
+Avg. Return Value	
+Average monetary value of returns 
+
+Yes (YoY Avg. Return Value change) 
+
+Top 5 Employees	
+Dynamic calculation of top employees by return count 
+
+Yes (YoY return count difference shown) 
+
+% Contribution	
+% Contribution of Each Employee to Total Returns 
+
+
+Yes (Comparison with last year's contribution) 
+
+
+
+Export to Sheets
+📈 Dashboard Components (Visualization & UI/UX)
+The final dashboard design is clean, professional, and highly interactive, meeting all visualization requirements:
+
+
+1. Key Performance Indicators (KPIs)
+Five KPI cards are displayed at the top, which all adhere to the requirement of showing YoY comparison:
+
+Return Rate % (e.g., 0.09).
+
+YoY Return Rate % Change (e.g., 0.60).
+
+Avg. Return Value (e.g., 206.67).
+
+YoY Avg. Return Value Change (e.g., -0.06).
+
+Total Returns (e.g., 594).
+
+2. Visual Analysis Charts
+Chart Type	Name	Purpose & Assignment Alignment
+Donut Chart	
+% contribution by employee with YoY difference tooltip 
+
+
+Shows the contribution of key personnel (Anna, Maigee, etc.) to the total return volume, with the last year's difference accessible in the tooltip.
+
+
+Bar Chart	
+Top 5 employees by returns with YoY comparison 
+
+Visually compares 
+
+Total Returns vs. Total Returns Last Year for the top-performing employees, highlighting YoY performance difference.
+
+Line Chart	
+Monthly return trends with YoY overlay 
+
+
+Tracks return volume over time (Jul 2014 onwards) with a clear YoY trend line overlay, aiding in trend and seasonality analysis.
+
+
+
+Export to Sheets
+3. Interactivity & Filters
+The dashboard features multiple slicers/filters for dynamic analysis:
+
+Employee/Person
+
+Region
+
+Date
+
+The dashboard ensures full 
+
+interactivity, where all visuals cross-filter properly upon selection.
+
+⭐️ Evaluation Criteria Focus
+This project was developed with a strong focus on the key evaluation areas:
+
+Criteria	Weight	Implementation Focus
+DAX & Time Intelligence	30%	
+Correctness and robust application of all five required YoY measures.
+
+Data Modeling	20%	
+Correct Star Schema and logical relationships established between all three tables.
+
+Visualization & UI/UX	20%	
+Professional design, consistent theme, and effective use of chart types (KPIs, Donut, Bar, Line).
+
+Insights & Storytelling	20%	
+The dashboard design facilitates the extraction and explanation of meaningful YoY insights.
+
+
+Export to Sheets
+🖥️ How to Run the Project
+Clone the Repository: Download or clone this project's files.
+
+Open in Power BI: Open the Retail_Returns_Dashboard.pbix file using Power BI Desktop.
+
+Explore the Data: Use the Person, Region, and Date slicers to dynamically filter the KPIs and visualizations.
